@@ -30,10 +30,19 @@
 
 ### 3. Cancer Type Classification
 
-
 * Each type of Cancer has a different course of treatment and remedial strategies. Thus, classification of Cancer type using transfer learning can help both the patient and the doctor during the course of treatment. 
-* Different types of Skin Cancer have different characteristics and treatment strategies. This is a multi class classification problem with 7 classes namely Actinic keratosis, Basal cell carcinoma,Benign keratosis, Dermatofibroma, Melanoma, Melanocytic nevus and Vascular lesion.
+
+* Different types of Skin Cancer have different characteristics and treatment strategies. This is a multi-class classification problem with 7 classes namely:
+  - Actinic keratosis
+  - Basal cell carcinoma
+  - Benign keratosis
+  - Dermatofibroma
+  - Melanoma
+  - Melanocytic nevus
+  - Vascular lesion
+
 * We use a combination of 3 ensembled transfer learning models that would give the type of Skin Cancer for a Positively diagnosed image.
+
 <p align="center">
   <img src="images/cancer-type.png" width="1000" title="hover text">
 </p>
@@ -62,6 +71,23 @@
 <p align="center">
   <img src="images/blogs.png" width="1000" title="hover text">
 </p>
+
+## A Machine can never replace a human
+ * Even though our predictions are really accurate(>95%),we need to be really careful while working with Machine Learning in the medical domain as our predictions are directly affecting someone’s life.
+ * The effect of discrepancies is much larger in the medical domain than others. 
+ * Thus, we just generate a preliminary report based on initial scans that can be referred by a doctor to ease the diagnosis process.
+
+## Tech Stack
+ - Flask
+ - Mysql
+ - HTML,CSS,JS 
+ - JQuery,AJAX
+ - PyTorch/FastAI
+ - Google Cloud Platform
+ - Apache2 Server
+ - Tensorflow/Keras
+
+
 
 ![](header.png)
 
