@@ -1,26 +1,67 @@
 # EPIDERMA Skin Cancer Detection Portal
-> We propose a novel method of primary skin cancer prevention that integrates the following features into a cloud based web framework which optimizes the process of cancer detection
+<p align="center">
+  <img src="images/title-text.png" width="1000" title="hover text">
+</p>
 
->### Objectives 
- >* Design an interactive patient and doctor portal
- >* Provide an e-report generation system using Deep Learning
- >* Assist the doctors in Skin Cancer diagnosis and imaging tasks
- >* Equip the portal with a backend doctor database and a location & filter specific doctor recommendation portal
- >* Add a symptom and disease tagging support system based on NLP
+ We propose a novel method of primary skin cancer prevention that integrates the following features into a cloud based web framework which optimizes the process of cancer detection
 
->### Features
-  >* Skin Cancer Probability Prediction
-  >* Skin Tumor Detection 
-  >* Skin Cancer Type Classification
-  >* Malignant Probability Prediction
-  >* Skin Tumor Size Prediction
-  >* DermaDroid Chatbot
-  >* Doctor Recommendation System
-  >* Report Generation System
-  >* Discussion Forum
-  >* Remedy Suggestion
+## Objectives 
+ * Design an interactive patient and doctor portal
+ * Provide an e-report generation system using Deep Learning
+ * Assist the doctors in Skin Cancer diagnosis and imaging tasks
+ * Equip the portal with a backend doctor database and a location & filter specific doctor recommendation portal
+ * Add a symptom and disease tagging support system based on NLP
+
+## Features 
+### 1. Skin Cancer Probability Prediction
+* Our classification system classifies the skin cancer tumor diseases as Positive and the regular skin diseases like Eczema, Moles, Acne, Warts, etc., along with the non-diseased images as Negative and also returns the probability of the same.
+* The model architecture used for the same is an ensemble of ResNet34 & ResNet50.
+<p align="center">
+  <img src="images/classification-samples.png" width="1000" title="hover text">
+</p>
+
+### 2. Tumor Localization
+
+* To ensure that the future diagnosis is robust, we propose a tumor detection system that would make a bounding box around the area in an image where the tumor is located, if any.
+* Tumor detection filters out the negative images and further makes the diagnosis process even more simplified for the medical practitioner.
+<p align="center">
+  <img src="images/obj-detection.png" width="1000" title="hover text">
+</p>
+
+### 3. Cancer Type Classification
 
 
+* Each type of Cancer has a different course of treatment and remedial strategies. Thus, classification of Cancer type using transfer learning can help both the patient and the doctor during the course of treatment. 
+* Different types of Skin Cancer have different characteristics and treatment strategies. This is a multi class classification problem with 7 classes namely Actinic keratosis, Basal cell carcinoma,Benign keratosis, Dermatofibroma, Melanoma, Melanocytic nevus and Vascular lesion.
+* We use a combination of 3 ensembled transfer learning models that would give the type of Skin Cancer for a Positively diagnosed image.
+<p align="center">
+  <img src="images/cancer-type.png" width="1000" title="hover text">
+</p>
+
+### 4. DERMATOS: Disease Symptom Tagging Bot
+
+* Instead of using external APIs, we build a basic rule based chatbot.
+* This comprises of a symptom disease tagging bot that would classify the diseases into several skin diseases. 
+<p align="center">
+  <img src="images/chat-samples.png" width="600" title="hover text">
+</p>
+
+### 5. Report Generation System
+
+* A cumulative report would be generated that would contain the inferences returned by the above mentioned models i.e. Skin Cancer Probability, Type of Skin Cancer, Image of Detected Tumor etc along with the user details.
+* This report file could be downloaded by the user. This report would come into great use for the doctor who would have a threshold result with him as a reference to base his treatment upon for each referred patient by him. 
+<p align="center">
+  <img src="images/sample-reports.png" width="1000" title="hover text">
+</p>
+
+### 6. Blogs
+
+* There is a dedicated portal for the users and doctors both to write and share blogs.
+* The blogs have additional support for likes, dislikes and comments.
+
+<p align="center">
+  <img src="images/blogs.png" width="1000" title="hover text">
+</p>
 
 ![](header.png)
 
@@ -58,7 +99,7 @@ python3 app.py
 
 ## Contributing
 
->1. Fork it (<https://github.com/namantuli18/Skin-Cancer-Detection.git>)
+>1. Fork it (<https://github.com/namantuli18/Epiderma.git>)
 >2. Create your feature branch (`git checkout -b feature/fooBar`)
 >3. Commit your changes (`git commit -am 'Add some fooBar'`)
 >4. Push to the branch (`git push origin feature/fooBar`)
