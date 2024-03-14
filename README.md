@@ -1,5 +1,4 @@
 # EPIDERMA Skin Cancer Detection Portal
-## Working Prototype http://104.197.144.40:8080/
 > We propose a novel method of primary skin cancer prevention that integrates the following features into a cloud based web framework which optimizes the process of cancer detection
 
 >### Objectives 
