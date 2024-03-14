@@ -1,0 +1,89 @@
+    <div class="sidebar" data-color="green" data-background-color="white" data-image="./static/assets/img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal text-center">
+          {{ user }}
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item {% if page=='Dashboard' %}active{% endif %}  ">
+            <a class="nav-link" href="./">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+            {% if 'user_id' not in session %}
+            <li class="nav-item {% if page=='Login' %}active{% endif %}">
+            <a class="nav-link" href="./login">
+              <i class="material-icons">person</i>
+              <p>Login</p>
+            </a>
+          </li>
+          <li class="nav-item {% if page=='SignUp' %}active{% endif %}">
+            <a class="nav-link" href="./signup">
+              <i class="material-icons">content_paste</i>
+              <p>SignUp</p>
+            </a>
+          </li>
+            {% else %}
+          <li class="nav-item  {% if page=='User Profile' %}active{% endif %}">
+            <a class="nav-link" href="./user">
+              <i class="material-icons">person</i>
+              <p>User Profile</p>
+            </a>
+          </li>
+
+          {% if session['user_role']==3 %}
+            <li class="nav-item  {% if page=='Pathology' %}active{% endif %}">
+              <a class="nav-link" href="./pathology">
+                <i class="material-icons">content_paste</i>
+                <p>Pathology</p>
+              </a>
+            </li>
+            <li class="nav-item  {% if page=='Doctors' %}active{% endif %}">
+              <a class="nav-link" href="./doctors">
+                <i class="material-icons">supervisor_account</i>
+                <p>Doctors</p>
+              </a>
+            </li>
+            {%endif%}
+          <li class="nav-item  {% if page=='Appointments' %}active{% endif %}">
+          <a class="nav-link" href="./appointments">
+            <i class="material-icons">library_books</i>
+            <p>Appointments</p>
+          </a>
+        </li>
+
+          <li class="nav-item  {% if page=='Blog' %}active{% endif %}">
+            <a class="nav-link" href="./blog">
+              <i class="material-icons">view_agenda</i>
+              <p>Blog</p>
+            </a>
+          </li>
+          <!-- <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
+            </a>
+          </li> -->
+          <!-- <li class="nav-item  {% if page=='FAQ' %}active{% endif %}">
+            <a class="nav-link" href="./faq">
+              <i class="material-icons">question_answer</i>
+              <p>FAQ's</p>
+            </a>
+          </li> -->
+            {% endif %}
+<!--
+          <li class="nav-item active-pro ">
+            <a class="nav-link" href="./upgrade.html">
+              <i class="material-icons">unarchive</i>
+              <p>Upgrade to PRO</p>
+            </a>
+          </li>
+-->
+        </ul>
+      </div>
+    </div>
